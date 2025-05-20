@@ -1,0 +1,153 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.app {
+    margin: 0;
+    font-family: "Poiret One", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar {
+    font-size: 24px;
+    margin-left: 32px;
+}
+
+.navbar a {
+    color: inherit;
+    text-decoration: none;
+    font-family: "Poiret One", sans-serif;
+    padding: 24px;
+}
+
+.navbar button {
+    font-size: 24px;
+    font-family: "Poiret One", sans-serif;
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 24px;
+}
+
+.modalContacts span {
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+}
+
+.main {
+    display: flex;
+}
+
+.components {
+    font-weight: bold;
+    border: 2px #B1B1B1 solid;
+    margin: 40px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1100px;
+    max-height: 110px;
+
+}
+
+.components.active {
+    border: 2px green solid;
+}
+
+.componentLogo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.powerUnit {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    margin-left: 18px;
+    margin-right: 12px;
+}
+
+.configurationImg {
+    border: 2px #B1B1B1 solid;
+}
+
+.componentAdd {
+    border: 0;
+    background-color: white;
+    font-family: "Poiret One", sans-serif;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.componentAdd:hover {
+    background-color: #cde8f7;
+    transition: 0.4s;
+    border-radius: 8px;
+    font: bold;
+}
+
+.rightAdd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    width: 600px;
+    font-size: 20px;
+    /* border: 2px solid */
+}
+
+.pickedIron {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid; */
+}
+
+.pickedImg {
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pickedImg.ram {
+    height: 60px;
+    width: 100px;
+}
+
+.rightConteiners {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+
+.btnName {
+    height: 55px;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.btnName:hover {
+    background-color: #cde8f7;
+    transition: 0.5s;
+}
+
+.inputName {
+    height: 55px;
+}

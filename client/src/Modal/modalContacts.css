@@ -1,0 +1,58 @@
+.modalik {
+    height: 100vh;
+    width: 100vmax;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    flex-direction: column;
+}
+
+.modalik.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modalik__content {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    width: 24vmax;
+}
+
+.modalik__content.active {
+    transform: scale(1);
+}
+
+.contacts {
+    font-size: 24px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+}
+
+.team {
+    padding-bottom: 10px;
+}
+
+.git {
+    background-color: black;
+    width: 220px;
+    position: relative;
+    top: -30px;
+    color: white;
+    pointer-events: all;
+    border-radius: 100px;
+    text-align: center;
+}

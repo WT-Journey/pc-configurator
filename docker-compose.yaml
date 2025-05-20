@@ -1,0 +1,49 @@
+version: '3.1'
+
+services:
+  react-app:
+    build: ./client
+    ports:
+      - 3000:3000
+    volumes:
+      - /app/node_modules
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=root
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./db-create/tables_create.sql:/docker-entrypoint-initdb.d/database-seed.sql
+      - ./db:/var/lib/postgresql/data
+      
+  backend:
+    build: ./server
+    depends_on:
+      - postgres
+    volumes:
+      - /server/node_modules
+      - ./server:/server
+    ports:
+      - "8080:8080"
+
+  pgadmin:
+    container_name: pgadmin4_container_
+    image: dpage/pgadmin4:7
+    restart: always
+    user: "${UID}:${GID}"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "16543:80"
+    volumes:
+      - ./pgadmin-data:/var/lib/pgadmin
+    depends_on:
+      - postgres
