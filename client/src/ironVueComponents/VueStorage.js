@@ -16,14 +16,14 @@ export default function VueStorage({items, parentCallback}) {
                         <div className='leftBlock'>                       
                             <img src={item.img} alt="" className='cardImg'/>
                             <div>
-                                <h1>{item.name}</h1>
+                                <h2>{item.name}</h2>
                                 <div>
                                     <p>{item.disk_type}</p>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <h2>{item.price}</h2>
+                            <h2 className="itemWrapper">{item.price}</h2>
                             <button onClick={() => handlerItem(item)}>Додати</button>
                         </div> 
                     </div>

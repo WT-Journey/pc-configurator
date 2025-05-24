@@ -25,7 +25,7 @@
     background-color: white;
     transform: scale(0.5);
     transition: 0.4s all;
-    width: 24vmax;
+    /* width: 24vmax; */
 }
 
 .modalik__content.active {
@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 200px;
+    height: 150px;
 }
 
 .team {

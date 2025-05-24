@@ -13,10 +13,12 @@ html {
     font-family: "Poiret One", sans-serif;
 }
 
-.header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.header {  
+  height: 60px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .navbar {
@@ -63,7 +65,6 @@ html {
     align-items: center;
     width: 1100px;
     max-height: 110px;
-
 }
 
 .components.active {
@@ -123,6 +124,7 @@ html {
     height: 100px;
     justify-content: space-between;
     align-items: center;
+    margin-right: 15px;
 }
 
 .pickedImg.ram {
@@ -160,11 +162,12 @@ html {
 }
 
 .wrapper {
+    margin-top: 30px;
     border-top: 2px #B3B3B3 solid;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 60px;
+    padding-left: 40px;
     padding-right: 150px;
 }
 
@@ -202,12 +205,13 @@ html {
 .rename {
     border: 0;
     background-color: white;
-    font-size: 28px;
+    font-size: 20px;
     font-family: "Play", sans-serif;
+    width: 600px;
 }
 
 .renameBtn {
-    margin-left: 2px;
+    margin-left: 30px;
     background-color: white;
     border: none;
 }
@@ -224,6 +228,12 @@ html {
 
 .leftBlock {
     display: flex;
+    margin-top: 20px;
+}
+
+.itemWrapper{
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 /* iron vue style */
@@ -232,4 +242,9 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.footer{
+  padding: 20px;
+  text-align: center;
 }

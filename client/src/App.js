@@ -4,6 +4,8 @@ import ModalInfo from "./Modal/ModalInfo";
 import {Routes, Route} from "react-router-dom";
 import {ConfigsPage} from "./pages/ConfigsPage";
 import {MainPage} from "./pages/MainPage"
+import Footer from "./components/Footer";
+
 import "./App.css";
 
 function App() {
@@ -336,6 +338,7 @@ function App() {
   const [modalContactsActive, setModalContactsActive] = useState(false);
   // отримання фільтрів 
   return (
+    <div className="app-wrapper">
     <div className="app">
         <header className="header">
           <a href="/">
@@ -352,13 +355,17 @@ function App() {
         </ModalInfo>
         <ModalContacts active={modalContactsActive} setActive={setModalContactsActive} className="modalContacts">
         </ModalContacts>
+        <main className="main-content">
         <Suspense fallback={<div>loading...</div>}>
         <Routes>
           <Route path="/" element={<MainPage />}/>  
           <Route path="/configs" element={<ConfigsPage />}/>
         </Routes>
         </Suspense>
-    </div> 
+        </main>
+    </div>
+     <Footer />
+     </div> 
   )
 }
 

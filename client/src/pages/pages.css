@@ -123,6 +123,7 @@ html {
     height: 100px;
     justify-content: space-between;
     align-items: center;
+    margin-right: 15px;
 }
 
 .pickedImg.ram {

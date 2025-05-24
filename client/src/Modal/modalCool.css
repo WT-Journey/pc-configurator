@@ -19,7 +19,7 @@
 }
 
 .modal__content {
-    padding: 80px;
+    padding: 50px;
     border-radius: 12px;
     background-color: white;
     transform: scale(0.5);
