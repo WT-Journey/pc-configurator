@@ -22,39 +22,6 @@ entire body portion of an incoming
 request stream and exposes it on req.body
 */
 
-// async function get_data_cpu(num_cols, cat_cols, component, data, base_query){
-//   query = base_query
-//   for (let f in data){
-//     if(data[f]){
-//       if(num_cols.includes(f)){
-//         query=query+' AND '+f+'>'+data[f][0]+' AND '+f+'<'+data[f][1]
-//       }
-//       if(category_filters.includes(f)){
-//         query=query+' AND ('+f+'='+data[f][0]
-//         if(data[f].length>1){
-//           for(i=1;i<data[f].length;i++){
-//               query=query+' OR '+f+'='+data[f][i]
-//           }
-//         }
-//         query=query+')'
-       
-//       }
-//     }
-//     console.log(query)
-//   }
-  
-//   all_data = await pool.query(query);
-//   all_data = {'Page_data' : all_data.rows} 
-//   for (let cat_col in cat_cols){
-//     filter_querry = `SELECT ${cat_cols[cat_col]}, COUNT(*) as amount FROM ${component} \
-//     GROUP BY ${cat_cols[cat_col]}`;
-//     filter = await pool.query(filter_querry)
-//     f = {[cat_cols[cat_col]] : filter.rows}
-//     all_data = Object.assign(all_data, f)
-//   }
-//   return all_data
-// }
-
 async function get_data(num_cols, cat_cols, component, data, base_query){
   query = base_query
 
